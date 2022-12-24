@@ -42,36 +42,41 @@ class ProfileCard extends StatelessWidget {
           Container(
             width: size.width * 0.305,
             padding:const EdgeInsets.symmetric(vertical: 12) ,
-            child: Flexible(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  Text(
-                    'Lorenzo Pichilli',
-                    style: TextStyle(
-                        color: secondaryColor,
-                        fontSize: 18,
-                        fontWeight: FontWeight.w600),
-                    maxLines: 1,
-                    textAlign: TextAlign.left,
-                    softWrap: false,
-                    overflow: TextOverflow.ellipsis,
+            child: Flex(
+              direction: Axis.horizontal,
+              children: [
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      Text(
+                        'Lorenzo Pichilli',
+                        style: TextStyle(
+                            color: secondaryColor,
+                            fontSize: 18,
+                            fontWeight: FontWeight.w600),
+                        maxLines: 1,
+                        textAlign: TextAlign.left,
+                        softWrap: false,
+                        overflow: TextOverflow.ellipsis,
+                      ),
+                      Text(
+                        'I\'m a Software Engineer mostly focused on Web (FullStack) and Mobile Development. JavaScript, TypeScript & Flutter enthusiast ',
+                        style: TextStyle(
+                            color: secondaryColor,
+                            fontSize: 14,height:1.4 ,
+                            fontWeight: FontWeight.w300),
+                        maxLines: 3,
+                        textAlign: TextAlign.left,
+                        softWrap: false,
+                        overflow: TextOverflow.ellipsis,
+                        
+                      ),
+                    ],
                   ),
-                  Text(
-                    'I\'m a Software Engineer mostly focused on Web (FullStack) and Mobile Development. JavaScript, TypeScript & Flutter enthusiast ',
-                    style: TextStyle(
-                        color: secondaryColor,
-                        fontSize: 14,height:1.4 ,
-                        fontWeight: FontWeight.w300),
-                    maxLines: 3,
-                    textAlign: TextAlign.left,
-                    softWrap: false,
-                    overflow: TextOverflow.ellipsis,
-                    
-                  ),
-                ],
-              ),
+                ),
+              ],
             ),
           ),
           Container(
